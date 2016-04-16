@@ -24,9 +24,11 @@ var reverseCardNumbers = getAllIndex(cards, false).map(function(index){
 print(reverseCardNumbers);
 function getAllIndex(arr, val){
 	var index = [];
-	var i = -1;
-	while ((i = arr.indexOf(val, i+1)) != -1){
-		index.push(i);
+	var i;
+	for(i = 0; i < arr.length; i++){
+		if(arr[i] === val){
+				index.push(i);
+		}
 	}
 	return index;
 }
