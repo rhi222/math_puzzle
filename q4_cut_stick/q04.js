@@ -1,16 +1,16 @@
 #!/usr/bin/env jsc
 
 
-function cutBar(people, cm, currentBar){
+function cutBar(people, initialCm, currentBarNum){
 	var count = 0;
-	//棒の本数が全て1cmになったら処理終了
-	if (cm <= currentBar){
+	//棒の本数が全て1initialCmになったら処理終了
+	if (initialCm <= currentBarNum){
 		return count;
 	//
-	} else if (currentBar < people){
-		count = 1 + cutBar(people, cm, currentBar * 2)
+	} else if (currentBarNum < people){
+		count = 1 + cutBar(people, initialCm, currentBarNum * 2)
 	} else {
-		count = 1 + cutBar(people, cm, currentBar + people)
+		count = 1 + cutBar(people, initialCm, currentBarNum + people)
 	}
 	return count;
 }
