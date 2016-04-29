@@ -3,6 +3,7 @@ describe("Player", function() {
   var Song = require('../../lib/jasmine_examples/Song');
   var player;
   var song;
+  console.log(Player);
 
   beforeEach(function() {
     player = new Player();
